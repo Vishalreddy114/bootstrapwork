@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/bootstrap-table.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/bootstrap-table.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+ 
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {
+      height: 450px
+    }
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+
+      .row.content {
+        height: auto;
+      } 
+     
+    } 
+    .validation {
+           color: #FF0000;
+           font-weight: bold;
+           font-size:large;
+       } 
+       .inner-addon {
+  position: relative;
+}
+
+/* style glyph */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align glyph */
+.left-addon .glyphicon  { left:  10px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+  </style>
+</head>
+
+<body>
+  
+<div class="row" style="background-color: rgba(3, 92, 7, 0.548);"> 
+  <div class="col-sm-6">
+    <img src="image/northwest.jpg" alt="Northwestlogo" id="northwestpic" class="image" width="350px" height="80px">
+  </div>
+  <div class="col-sm-2">
+    
+  </div>
+  <div class="col-sm-4" style="text-align: right;color: rgb(10, 10, 10);">
+    <p></p>
+    
+   <p style="font-weight: bolder;">Phone: 660.562.1634</p>
+    <p style="font-weight: bolder;">Email: helpdesk@nwmissouri.edu</p>
+    
+    
+  </div>
+  
+ 
+  
+</div>
+<div class="row" style="background-color: darkgrey;">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid" style="background-color: rgb(19, 18, 18);">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" style="padding: 5px 15px;">
+          <img src="image/northimage.jpg" alt="Northiconlogo" id="northwestpic" class="img-circle" width="50px" height="45px">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" style="font-weight: bold;">
+          <li class="active" ><a href="./FIRSTWEBPAGE.html" style="color: rgb(249, 255, 248);">Home</a></li>
+          <li><a href="about.html" style="color: rgb(249, 255, 248);">About</a></li>
+         
+          <li><a href="contact2.html" style="color: rgb(249, 255, 248);">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="home.html"><span class="glyphicon glyphicon-log-in"></span> Exit</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+  <div class="container-fluid text-center">
+    <div class="row content">
+      <div class="col-sm-2 sidenav">
+        <p><a href="#">Link</a></p>
+        <p><a href="#">Link</a></p>
+        <p><a href="#">Link</a></p>
+      </div>
+      <div class="col-sm-8 text-left" id="registrationgird">
+        <h1 style="text-align: center;">Registration</h1>
+        </br>
+        <div class="row">
+          <div class="col-sm-6">
+            <!--start givenName-->
+            <div class="row">
+              <div class="col-sm-3" style="text-align: left;">
+                
+                <label for="givenName" id="idName">Given Name<span class="validation"><strong>*
+                </strong></span></strong> </label>
+
+              </div>
+              <div class="col-sm-1" style="text-align: left;"><strong>:</strong></div>
+              <div class="col-sm-8 inner-addon left-addon">
+                <i class="glyphicon glyphicon-user"></i>  
+                <input type="text" class="form-control" id="txtGivenName" placeholder="Enter First Name">
+              </div>
+
+            </div> 
+            
+            <!--end givenName-->
+            </br>
+            <!--start enter 919number-->
+            <div class="row">
+              <div class="col-sm-3" style="text-align: left;">
+                <label for="NineoneNumber" id="idNineoneNumber">Enter 919#<span class="validation"><strong>*
+                </strong></span></strong> </label>
+
+              </div>
+              <div class="col-sm-1" style="text-align: left;"><strong>:</strong></div>
+               <div class="col-sm-8 inner-addon left-addon">
+                <i class="glyphicon glyphicon-pencil"></i>  
+                <input type="Number" class="form-control" id="txtNineoneNumber" placeholder="Enter 919#Number">
+              </div>
+
+            </div>
+            <!--end enter 919number-->
+            </br>
+            <!--start firstdropdown-->
+            <div class="row">
+              <div class="col-sm-3" style="text-align: left">
+                <label for="degree" id="lblDegree">Degree <span class="validation"><strong>*
+                </strong></span></strong></label>
+
+              </div>
+              <div class="col-sm-1" style="text-align: left;"><strong>:</strong></div>
+               <div class="col-sm-8">
+                <select id="dropdown1" name="course" style="width: 100%;" onchange="popup()">
+                  <option value="0">select</option>
+                  <option value="1">Bachelors</option>
+                  <option value="2">Masters</option>
+                </select>
+
+
+
+              </div>
+
+            </div>
+            </br>
+            <!--start radiobutton-->
+            <div class="row">
+              <div class="col-sm-3" style="text-align: left">
+                <label for="genderid" id="lblGender">Gender <span class="validation"><strong>*
+                </strong></span></strong></label>
+
+              </div>
+              <div class="col-sm-1" style="text-align: left;"><strong>:</strong></div>
+               <div class="col-sm-8">
+                <input type="radio" name="genderS" value="Male" checked="checked">Male</input>
+                
+                <input type="radio" name="genderS" value="Female">Female</input>
+                
+
+              </div>
+
+            </div>
+
+            </br>
+            <div class="row">
+              <div class="col-sm-3" style="text-align: left">
+                <label for="lblPhoneNumber" id="lblPhoneNumber">Phone Number <span class="validation"><strong>*
+                </strong></span></strong></label>
+
+              </div>
+              <div class="col-sm-1" style="text-align: left;"><strong>:</strong></div>
+               <div class="col-sm-8 inner-addon left-addon">
+                <i class="glyphicon glyphicon-phone"></i> 
+                <input type="number" class="form-control" id="txtphoneNumber" placeholder="Enter Phone Number">
+
+
+
+              </div>
+
+            </div>
+
+            <!--end radiobutton-->
+
+          </div>
+          <div class="col-sm-6">
+            <!--start last name-->
+            <div class="row">
+              <div class="col-sm-3" style="text-align: left;">
+                <label for="LastName" id="lblLastName">Last Name <span class="validation"><strong>*
+                </strong></span></strong></label>
+
+              </div>
+              <div class="col-sm-1" style="text-align: left;"><strong>:</strong></div>
+               <div class="col-sm-8 inner-addon left-addon">
+                <i class="glyphicon glyphicon-user"></i> 
+                <input type="text" class="form-control" id="txtLastName" placeholder="Enter Last Name">
+              </div>
+
+            </div>
+            <!--end lastname-->
+            </br>
+            <!--start date-->
+            <div class="row">
+              <div class="col-sm-3" style="text-align: left">
+                <label for="datetime" id="lblDate">Date <span class="validation"><strong>*
+                </strong></span></strong></label>
+
+              </div>
+              <div class="col-sm-1" style="text-align: left;"><strong>:</strong></div>
+               <div class="col-sm-8 inner-addon left-addon">
+                <i class="glyphicon glyphicon-calendar"></i> 
+                <input type="date" class="form-control" id="txtdate">
+              </div>
+
+            </div>
+            <!--end date-->
+            <br>
+
+
+            <!--for dropdown2-->
+            <div class="row">
+              <div class="col-sm-3" style="text-align: left">
+                <label for="courselt" id="lblCourse">Course <span class="validation"><strong>*
+                </strong></span></strong></label>
+
+              </div>
+              <div class="col-sm-1" style="text-align: left;"><strong>:</strong></div>
+               <div class="col-sm-8">
+                <select id="dropdown2" name="course2"></select>
+                <br>
+
+
+              </div>
+
+            </div>
+            <!--end dropdown2-->
+            </br>
+            <!--start email-->
+            <div class="row">
+              <div class="col-sm-3" style="text-align: left">
+                <label for="Emailuser" id="lblEmail">Email <span class="validation"><strong>*
+                </strong></span></strong></label>
+
+              </div>
+              <div class="col-sm-1" style="text-align: left;"><strong>:</strong></div>
+              <div class="col-sm-8 inner-addon left-addon">
+                <i class="glyphicon glyphicon-envelope"></i> 
+                <input type="email" class="form-control" id="txtEmail" placeholder="abc@gmail.com" onblur="validateEmail(this);">
+
+
+
+              </div>
+
+            </div>
+            
+            </br>
+
+            <div class="row">
+              <div class="col-sm-3" style="text-align: left">
+                <label for="Addressuser" id="lblAddress">Address <span class="validation"><strong>*
+                </strong></span></strong></label>
+
+              </div>
+              <div class="col-sm-1" style="text-align: left;"><strong>:</strong></div>
+              <div class="col-sm-8">
+
+                <textarea rows="2" cols="35" name="comment" form="usrform" id="txtareaaddress"></textarea>
+
+
+
+              </div>
+
+            </div>
+            <!--end email-->
+
+
+          </div>
+
+        </div>
+        </br>
+        <div class="row" id="Alertmsg" style="display: none;text-align: center;">
+
+
+          <div class="alert alert-danger" role="alert">
+            <label id="lblalert"></label>
+          </div>
+
+
+        </div>
+        <!-- Start Buttons-->
+        </br>
+        <div class="row">
+          <div class="col-sm-3" style="text-align: left"></div>
+          <div class="col-sm-3" style="text-align: right">
+            <button type="button" class="btn btn-primary" style="width: 60%;" onclick="clear()">Clear</button>
+          </div>
+          <div class="col-sm-3" style="text-align: left">
+            <button type="button" class="btn btn-success" style="width: 60%;" onclick="register()">Register</button>
+
+          
+          </div>
+          <div class="col-sm-3" style="text-align: left"></div>
+
+        </div>
+      </br>
+  
+
+        <!-- End  Buttons-->
+      </div> 
+      <div class="col-sm-8 text-left" id="registrationtable">
+      </br>
+    
+    <h2 style="font-weight: bold; color: green; text-align: center;">Registration Details</h2>
+    <hr>
+        <div class="row">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-6" style="text-align: center;"width="100%" >
+            <div class="container" style="width: 100%;">
+                        
+              <table class="table table-bordered" style="width:100%">
+               
+                <tbody>
+                  <tr>
+                    <td> <label for="resultgivenName" id="lblresultgivenName"> GivenName</label></td>
+                    <td><label for="registorgivenName" id="lblregistorgivenName"> </label></td>
+                   
+                  </tr>
+                  <tr>
+                    <td> <label for="resultLastName" id="lblresultLastName"> LastName</label></td>
+                    <td><label for="registorlastName" id="lblregistorlastName"> </label></td>
+                  
+                  </tr>
+                  <tr>
+                    <td> <label for="resultGender" id="lblresultGender"> Gender</label></td>
+                    <td><label for="registorGender" id="lblregistorGender"> </label></td>
+                  
+                  </tr>
+                  <tr>
+                    <td> <label for="resultPhoneNumber" id="lblresultPhoneNUmber"> PhoneNUmber</label></td>
+                    <td><label for="registorphoneNumber" id="lblregistorphoneNumber"> </label></td>
+                  
+                  </tr>
+                  <tr>
+                    <td> <label for="resultdate" id="lblresultdate"> Date</label></td>
+                    <td><label for="registordate" id="lblregistordate"> </label></td>
+                  
+                  </tr>
+                  <tr>
+                    <td> <label for="resultdegree" id="lblresultdegree"> degree</label></td>
+                    <td><label for="registordegree" id="lblregistordegree"> </label></td>
+                  
+                  </tr>
+                  <tr>
+                    <td> <label for="resultcourse" id="lblresultcourse"> course</label></td>
+                    <td><label for="registorcourse" id="lblregistorcourse"> </label></td>
+                  
+                  </tr>
+                  <tr>
+                    <td> <label for="resultEmail" id="lblresultEmail"> Email</label></td>
+                    <td><label for="registorEmail" id="lblregistorEmail"> </label></td>
+                  
+                  </tr>
+                  <tr>
+                    <td> <label for="resultNine" id="lblresultNine"> 919#Number</label></td>
+                    <td><label for="registorNine" id="lblregistorNine"> </label></td>
+                  
+                  </tr>
+                  <tr>
+                    <td> <label for="resultaddress" id="lblresultaddress"> Address</label></td>
+                    <td><label for="registoraddress" id="lblregistoraddress"> </label></td>
+                  
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        
+        
+          </div>
+          <div class="col-sm-2" style="text-align:right">
+            <a href="FIRSTWEBPAGE.html"> <button type="button" class="btn btn-warning" style="width: 60%;font-weight: bolder;">Back</button></a>
+           
+          </div>
+          <div class="col-sm-1"></div>
+          
+             </div>
+      </div>
+     
+      <div class="col-sm-2 sidenav">
+        <div class="well" style="background-color: rgb(54, 202, 141);">
+          <img src="image/our_pride (1).gif" alt="Northwestgif" id="northwestpic" class="image" width="160px" height="300px">
+        </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid text-center">
+    <p>Footer Text</p>
+  </footer>
+  <script> 
+
+$('#registrationtable').hide();
+var date = new Date();
+
+var day = date.getDate();
+var month = date.getMonth() + 1;
+var year = date.getFullYear();
+
+if (month < 10) month = "0" + month;
+if (day < 10) day = "0" + day;
+
+var today = year + "-" + month + "-" + day;       
+document.getElementById("txtdate").value = today;
+$('#txtdate').attr('min', today); 
+
+    function register(){
+     
+
+var textBox = document.getElementById("txtNineoneNumber");
+var textLength = textBox.value.length;
+var textphonenumber = document.getElementById("txtphoneNumber");
+var phonenum = textphonenumber.value.length;
+alert(textLength) 
+if(document.getElementById("txtGivenName").value.length<=0)
+{ 
+  alert("1st testing")
+  document.getElementById("lblalert").innerHTML=" please enter first Name" 
+  
+  $('#Alertmsg').show();
+  $('#txtGivenName').focus();
+  return false;
+} 
+if(document.getElementById("txtLastName").value.length<=0)
+{
+  document.getElementById("lblalert").innerHTML=" please enter Last Name"
+  $('#Alertmsg').show();
+  $('#txtLastName').focus();
+  return false;
+}
+if(document.getElementById("txtNineoneNumber").value.length<=0)
+{
+  document.getElementById("lblalert").innerHTML=" please enter 919# Number"
+  $('#Alertmsg').show();
+  $('#txtNineoneNumber').focus();
+  return false;
+}
+if(textBox<=9)
+{ 
+  alert("testinggggggg")
+  document.getElementById("lblalert").innerHTML="Please enter 9 digit 919number"
+  $('#txtNineoneNumber').focus();
+  return false;
+
+} 
+
+const datereg= $('#txtdate').val() 
+if (datereg=="") 
+{
+  document.getElementById("lblalert").innerHTML="Please enter date"
+  $('#Alertmsg').show();
+  return false;
+}
+if(document.getElementById("txtphoneNumber").value.length<=0)
+{
+  document.getElementById("lblalert").innerHTML=" please enter Phone Number"
+  $('#Alertmsg').show();
+  $('#txtphoneNumber').focus();
+  return false;
+}
+if(document.getElementById("dropdown1").value<=0)
+{
+  document.getElementById("lblalert").innerHTML=" please select degree"
+  $('#Alertmsg').show();
+  $('#dropdown1').focus();
+  return false;
+}
+if(phonenum<10)
+{ 
+  alert("phonenumbertesting")
+  document.getElementById("lblalert").innerHTML="Please enter 10 phone number"
+  $('#Alertmsg').show();
+  $('#txtphoneNumber').focus();
+  return false;
+
+} 
+ 
+if(document.getElementById("txtEmail").value.length<=0)
+{
+  document.getElementById("lblalert").innerHTML=" please enter email"
+  $('#Alertmsg').show();
+  $('#txtEmail').focus();
+  return false;
+}
+if(document.getElementById("txtareaaddress").value.length<=0)
+{
+  document.getElementById("lblalert").innerHTML=" please enter Address"
+  $('#Alertmsg').show();
+  $('#txtareaaddress').focus();
+  return false;
+}
+
+
+document.getElementById("lblregistorgivenName").innerHTML= document.getElementById("txtGivenName").value
+document.getElementById("lblregistorlastName").innerHTML= document.getElementById("txtLastName").value
+
+document.getElementById("lblregistorGender").innerHTML=$('input[name="genderS"]:checked').val();
+document.getElementById("lblregistorphoneNumber").innerHTML= document.getElementById("txtphoneNumber").value
+document.getElementById("lblregistordate").innerHTML= $('#txtdate').val()
+var sel = document.getElementById("dropdown1");
+document.getElementById("lblregistordegree").innerHTML= sel.options[sel.selectedIndex].text
+var sel2 = document.getElementById("dropdown2");
+document.getElementById("lblregistorcourse").innerHTML= sel2.options[sel2.selectedIndex].text
+document.getElementById("lblregistorEmail").innerHTML= document.getElementById("txtEmail").value
+document.getElementById("lblregistorNine").innerHTML= document.getElementById("txtNineoneNumber").value
+document.getElementById("lblregistoraddress").innerHTML= document.getElementById("txtareaaddress").value
+
+Swal.fire({
+  title: "<i>Course Registration</i>", 
+  html: "Successfully registered",  
+  confirmButtonText: "OK", 
+});   
+$('#registrationgird').hide(); 
+
+$('#registrationtable').show();
+
+
+
+  } 
+
+  function validateEmail(emailField){
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+       
+        if (reg.test(emailField.value) == false) 
+        {
+          Swal.fire({
+  title: "<i>Email</i>", 
+  html: "Invalid Email Address",  
+  confirmButtonText: "OK", 
+}); 
+           
+           
+            return false;
+        }
+
+        return true;
+
+}
+
+
+  function popup() {
+  alert("sai")
+        var val =  $('#dropdown1').val();
+        alert(val)
+        document.getElementById("dropdown2").innerHTML=" ";
+   $('#dropdown2').val();
+  
+  
+   if($('#dropdown1').val()=="1"){ 
+    
+    alert("sai")
+      var options=["Computer Science","Applied Health Science","Agricultural Education","Finance","History","Graphic Design"];
+   }
+    if($('#dropdown1').val() =="2"){ 
+         alert("saikrishna")
+      var options=["Computer Science","School of Business","Health Science","School of Education","Social Sciences","Mathematics & Statistics"];
+    }
+    var select = document.getElementById("dropdown2");
+  
+    for(var i = 0; i < options.length; i++) { 
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = i;
+    select.appendChild(el);
+} 
+  }
+     
+
+     function clear(){
+
+  alert("saikrishna");
+  document.getElementById("txtGivenName").innerHTML=" "
+ document.getElementById("txtLastName").innerHTML=" "
+ document.getElementById("txtphoneNumber").innerHTML=" "
+ $('#txtdate').val()=""
+document.getElementById("dropdown1").innerHTML="0";
+
+document.getElementById("dropdown2").innerHTML="1";
+
+ document.getElementById("txtEmail").innerHTML=" "
+document.getElementById("txtNineoneNumber").innerHTML=" "
+ document.getElementById("txtareaaddress").innerHTML=" "
+
+}
+
+  </script>
+</body>
+
+</html>
