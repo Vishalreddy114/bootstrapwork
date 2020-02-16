@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' >
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/bootstrap-table.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/bootstrap-table.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    } 
+    h3 {
+  font: 100 30px/1.3 'Oleo Script', Helvetica, sans-serif;
+  color: #051d69c5;
+ 
+}
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav" style="background-color: rgb(14, 182, 204);">
+      <h2 style="font-weight: bold;">Developers Blog</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a><button type="button" class="btn btn-info" onclick="popup()" style="width: 200px;">Introduction</button></a></li>
+        <br>
+        <li><a><button type="button" class="btn btn-success" style="width: 200px;" onclick="bootstrap()">Bootstrap</button></a></li>
+        <br>
+        <li><a><button type="button" class="btn btn-warning" style="width: 200px;" onclick="CSS()">CSS</button></a></li>
+        <br>
+        <li><a><button type="button" class="btn btn-danger" style="width: 200px;" onclick="Javaspt()">Javascript</button></a></li>
+        <br>
+        <li><a href="./FIRSTWEBPAGE.html"><button type="button" class="btn btn-primary" style="width: 200px;">Back</button></a></li>
+       
+        
+      </ul><br>
+     
+    </div>
+
+    <div class="col-sm-9" id="developersintro" style="display: none;">
+    <h4><small>RECENT POSTS</small></h4>
+    <hr>
+    <h1> <img src="image/sai.jpg" alt="Saikrishna" id="profilepicture" class="img-circle" width="150px" height="150px">
+    </h1>
+    
+    <h5><span class="glyphicon glyphicon-time"></span> Post by Sai krishna, feb 14, 2020.</h5>
+    <br>
+    <h4>Bootstrap is a front-end framework that is developed to support creating dynamic websites and web applications. It is one of the most preferred front-end frameworks as it aids an easy and fast processing to develop a website. It supports all major browsers and fast loading responsive web pages.</h4>
+    <br><br>
+    
+    <h4><small>RECENT POSTS</small></h4>
+    <hr>
+    <h2>Officially Blogging</h2>
+    <h5><span class="glyphicon glyphicon-time"></span> Post by John Doe, Sep 24, 2015.</h5>
+    <h5><span class="label label-success">Lorem</span></h5><br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <hr>
+  
+    </div> 
+    <div class="col-sm-9" id="bootstrapintro" style="display: none;">
+        <h4><small>RECENT POSTS</small></h4>
+        <hr>
+        <h1 style="text-align: center;"> <img src="image/bootstrapimage.jpg" alt="Saikrishna" id="profilepicture" class="img" width="550px" height="250px">
+        </h1>
+      
+     <br>
+        <h4>Bootstrap is a free front-end framework for faster and easier web development.It includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins
+            Bootstrap also gives you the ability to easily create responsive designs.</h4>
+        <br>
+        <h4>Responsive web design is about creating web sites which automatically adjust themselves to look good on all devices, from small phones to large desktops.</h4>
+        <br>
+        <h4>
+            Easy to use: Anybody with just basic knowledge of HTML and CSS can start using Bootstrap
+Responsive features: Bootstrap's responsive CSS adjusts to phones, tablets, and desktops
+Mobile-first approach: In Bootstrap, mobile-first styles are part of the core framework
+Browser compatibility: Bootstrap 4 is compatible with all modern browsers (Chrome, Firefox, Internet Explorer 10+, Edge, Safari, and Opera)
+        </h4> 
+
+        <hr>
+        <h3>Syntax</h3>
+        <br>
+        <p>
+            <!---->
+
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3"></div>
+                </div>
+                
+        </p>
+        <br>
+        <h3>
+            References:
+        </h3>
+        <p><a href="https://www.w3schools.com/bootstrap/">https://www.w3schools.com/bootstrap/</a></p>
+        <br>
+        <p><a href="https://www.w3schools.com/html/">https://www.w3schools.com/html/</a></p>
+        <br>
+        <p><a href="https://fezvrasta.github.io/bootstrap-material-design">https://fezvrasta.github.io/bootstrap-material-design</a></p>
+        
+
+
+
+      
+        </div>
+        <div class="col-sm-9" id="cssintro" style="display: none;">
+            <h4><small>RECENT POSTS</small></h4>
+            <hr>
+             <h3> CSS</h3>
+          
+         <br>
+            <h4>There are three ways of inserting a style sheet: </h4>
+            <br>
+            <p>1.External CSS:With an external style sheet, you can change the look of an entire website by changing just one file.Each HTML page must include a reference to the external style sheet file inside the <link> element, inside the head section.</p>
+            <br>
+            <p>
+               2.Internal CSS:An internal style sheet may be used if one single HTML page has a unique style.The internal style is defined inside the style> element, inside the head section.   
+            </p> 
+            <p>
+               3.Inline CSS:An inline style may be used to apply a unique style for a single element.To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.
+            </p>
+            <hr>
+            <h3>Syntax</h3>
+            <br>
+            
+               
+            
+            <h3>
+                References:
+            </h3>
+            <p><a href="https://www.w3schools.com/css/default.asp">https://www.w3schools.com/css/default.asp</a></p>
+            <br>
+            <p><a href="https://www.w3schools.com/css/css_dimension.asp">https://www.w3schools.com/css/css_dimension.asp</a></p>
+            <br>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">https://developer.mozilla.org/en-US/docs/Web/CSS/Reference</a></p>
+        
+        <hr>
+        <h2>Html</h2>
+        <h4> 
+            HTML is the standard markup language for Web pages.With HTML you can create your own Website.HTML is easy to learn - You will enjoy it.
+                  </h4>
+                  <br>
+                  <p>
+                    The "DOCTYPE html" declaration defines this document to be HTML5.
+                  </p>
+                  <br>
+                  <p>
+                    The "html" element is the root element of an HTML page.
+                    <br>
+                        The "head element contains meta information about the document.
+                        <br>
+                        The "title" element specifies a title for the document.
+                        <br>
+                        The "body" element contains the visible page content.
+                        <br>
+                        The "h1" element defines a large heading.
+                        <br>
+                        The "p" element defines a paragraph.
+                  </p>
+                  <h3>
+                    References:
+                  </h3> 
+                  <p>
+                    <p><a href="https://www.w3schools.com/html/default.asp">https://www.w3schools.com/html/default.asp</a></p>
+            <br>
+            <p><a href="https://www.w3schools.com/html/html_elements.asp">https://www.w3schools.com/html/html_elements.asp</a></p>
+            <br>
+            <p><a href="https://www.w3schools.com/html/html_styles.asp">https://www.w3schools.com/html/html_styles.asp</a></p>
+          
+                  </p>
+         </div>
+
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <p>Footer Text</p>
+</footer> 
+<script>
+   function popup()
+   {
+
+        $('#developersintro').show();
+        $('#bootstrapintro').hide();
+        $('#cssintro').hide();
+
+    } 
+    function bootstrap()
+    {
+        $('#bootstrapintro').show();
+        $('#developersintro').hide();
+        $('#cssintro').hide();
+
+} 
+function CSS()
+{   
+    $('#cssintro').show();
+    $('#bootstrapintro').hide();
+    $('#developersintro').hide();
+       
+    
+
+} 
+function Javaspt()
+{
+
+
+
+
+} 
+
+</script>
+
+</body>
+</html>

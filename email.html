@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Send Email</title>
+  <style>
+      input {
+  text-align: center;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  height: 10vw;
+  font-size: 2vw;
+  width: 100vw;
+}
+
+textarea {
+  text-align: center;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 5px;
+  width: 100vw;
+  height: 50vh;
+  font-size: 2vw;
+}
+
+button {
+  border: none;
+  background-color: white;
+  position: fixed;
+  right: 5px;
+  top: 5px;
+  transition: transform .5s;
+}
+
+input:focus {
+  outline: none;
+  color: orange;
+  border-radius: 3px;
+}
+
+textarea:focus {
+  outline: none;
+  color: orange;
+  border-radius: 7px;
+}
+
+button:focus {
+  outline: none;
+  transform: scale(0);
+  transform: rotate(360deg);
+}
+  </style>
+</head>
+
+<body align=center>
+  <input id="email" type="email" placeholder="yourfreind@something.somthing"></input><br><br>
+  <input id="subject" placeholder="Subject"></input><br>
+  <textarea id="message" placeholder="Message"></textarea><br>
+  <button id="send" onclick="send()"><img src=https://www.dropbox.com/s/chxcszvnrdjh1zm/send.png?dl=1 width=50px height=50px></img></button>
+</body>
+<script>
+function send() {
+  setTimeout(function() {
+    window.open("mailto:" + document.getElementById('email').value + "?subject=" + document.getElementById('subject').value + "&body=" + document.getElementById('message').value);
+  }, 320);
+}
+
+</script>
+</html>
