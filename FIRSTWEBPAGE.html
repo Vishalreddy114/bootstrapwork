@@ -131,9 +131,9 @@
   <div class="container-fluid text-center">
     <div class="row content">
       <div class="col-sm-2 sidenav">
-        <p><a href="#">Link</a></p>
-        <p><a href="#">Link</a></p>
-        <p><a href="#">Link</a></p>
+        <div class="well" style="background-color: rgb(54, 202, 141);">
+          <img src="image/northwestbearcats.jpg" alt="Northwestbearcat" id="northwestbearcat" class="image" width="160px" height="300px">
+        </div>
       </div>
       <div class="col-sm-8 text-left" id="registrationgird">
         <h1 style="text-align: center;">Registration</h1>
@@ -344,7 +344,7 @@
         <div class="row">
           <div class="col-sm-3" style="text-align: left"></div>
           <div class="col-sm-3" style="text-align: right">
-            <button type="button" class="btn btn-primary" style="width: 60%;" onclick="clear()">Clear</button>
+            <button type="button" class="btn btn-primary" style="width: 60%;" onclick="clreg()">Clear</button>
           </div>
           <div class="col-sm-3" style="text-align: left">
             <button type="button" class="btn btn-success" style="width: 60%;" onclick="register()">Register</button>
@@ -448,205 +448,10 @@
   </div>
 
   <footer class="container-fluid text-center">
-    <p>Footer Text</p>
+    <p>&copy; 2020 Bootstrap Material Design Workshop, all rights reserved</p>
   </footer>
-  <script> 
-
-$('#registrationtable').hide();
-var date = new Date();
-
-var day = date.getDate();
-var month = date.getMonth() + 1;
-var year = date.getFullYear();
-
-if (month < 10) month = "0" + month;
-if (day < 10) day = "0" + day;
-
-var today = year + "-" + month + "-" + day;       
-document.getElementById("txtdate").value = today;
-$('#txtdate').attr('min', today); 
-
-    function register(){
-     
-
-var textBox = document.getElementById("txtNineoneNumber");
-var textLength = textBox.value.length;
-var textphonenumber = document.getElementById("txtphoneNumber");
-var phonenum = textphonenumber.value.length;
-alert(textLength) 
-if(document.getElementById("txtGivenName").value.length<=0)
-{ 
-  alert("1st testing")
-  document.getElementById("lblalert").innerHTML=" please enter first Name" 
-  
-  $('#Alertmsg').show();
-  $('#txtGivenName').focus();
-  return false;
-} 
-if(document.getElementById("txtLastName").value.length<=0)
-{
-  document.getElementById("lblalert").innerHTML=" please enter Last Name"
-  $('#Alertmsg').show();
-  $('#txtLastName').focus();
-  return false;
-}
-if(document.getElementById("txtNineoneNumber").value.length<=0)
-{
-  document.getElementById("lblalert").innerHTML=" please enter 919# Number"
-  $('#Alertmsg').show();
-  $('#txtNineoneNumber').focus();
-  return false;
-}
-if(textBox<=9)
-{ 
-  alert("testinggggggg")
-  document.getElementById("lblalert").innerHTML="Please enter 9 digit 919number"
-  $('#txtNineoneNumber').focus();
-  return false;
-
-} 
-
-const datereg= $('#txtdate').val() 
-if (datereg=="") 
-{
-  document.getElementById("lblalert").innerHTML="Please enter date"
-  $('#Alertmsg').show();
-  return false;
-}
-if(document.getElementById("txtphoneNumber").value.length<=0)
-{
-  document.getElementById("lblalert").innerHTML=" please enter Phone Number"
-  $('#Alertmsg').show();
-  $('#txtphoneNumber').focus();
-  return false;
-}
-if(document.getElementById("dropdown1").value<=0)
-{
-  document.getElementById("lblalert").innerHTML=" please select degree"
-  $('#Alertmsg').show();
-  $('#dropdown1').focus();
-  return false;
-}
-if(phonenum<10)
-{ 
-  alert("phonenumbertesting")
-  document.getElementById("lblalert").innerHTML="Please enter 10 phone number"
-  $('#Alertmsg').show();
-  $('#txtphoneNumber').focus();
-  return false;
-
-} 
+  <script src="register.js"></script>
  
-if(document.getElementById("txtEmail").value.length<=0)
-{
-  document.getElementById("lblalert").innerHTML=" please enter email"
-  $('#Alertmsg').show();
-  $('#txtEmail').focus();
-  return false;
-}
-if(document.getElementById("txtareaaddress").value.length<=0)
-{
-  document.getElementById("lblalert").innerHTML=" please enter Address"
-  $('#Alertmsg').show();
-  $('#txtareaaddress').focus();
-  return false;
-}
-
-
-document.getElementById("lblregistorgivenName").innerHTML= document.getElementById("txtGivenName").value
-document.getElementById("lblregistorlastName").innerHTML= document.getElementById("txtLastName").value
-
-document.getElementById("lblregistorGender").innerHTML=$('input[name="genderS"]:checked').val();
-document.getElementById("lblregistorphoneNumber").innerHTML= document.getElementById("txtphoneNumber").value
-document.getElementById("lblregistordate").innerHTML= $('#txtdate').val()
-var sel = document.getElementById("dropdown1");
-document.getElementById("lblregistordegree").innerHTML= sel.options[sel.selectedIndex].text
-var sel2 = document.getElementById("dropdown2");
-document.getElementById("lblregistorcourse").innerHTML= sel2.options[sel2.selectedIndex].text
-document.getElementById("lblregistorEmail").innerHTML= document.getElementById("txtEmail").value
-document.getElementById("lblregistorNine").innerHTML= document.getElementById("txtNineoneNumber").value
-document.getElementById("lblregistoraddress").innerHTML= document.getElementById("txtareaaddress").value
-
-Swal.fire({
-  title: "<i>Course Registration</i>", 
-  html: "Successfully registered",  
-  confirmButtonText: "OK", 
-});   
-$('#registrationgird').hide(); 
-
-$('#registrationtable').show();
-
-
-
-  } 
-
-  function validateEmail(emailField){
-        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-       
-        if (reg.test(emailField.value) == false) 
-        {
-          Swal.fire({
-  title: "<i>Email</i>", 
-  html: "Invalid Email Address",  
-  confirmButtonText: "OK", 
-}); 
-           
-           
-            return false;
-        }
-
-        return true;
-
-}
-
-
-  function popup() {
-  alert("sai")
-        var val =  $('#dropdown1').val();
-        alert(val)
-        document.getElementById("dropdown2").innerHTML=" ";
-   $('#dropdown2').val();
-  
-  
-   if($('#dropdown1').val()=="1"){ 
-    
-    alert("sai")
-      var options=["Computer Science","Applied Health Science","Agricultural Education","Finance","History","Graphic Design"];
-   }
-    if($('#dropdown1').val() =="2"){ 
-         alert("saikrishna")
-      var options=["Computer Science","School of Business","Health Science","School of Education","Social Sciences","Mathematics & Statistics"];
-    }
-    var select = document.getElementById("dropdown2");
-  
-    for(var i = 0; i < options.length; i++) { 
-    var opt = options[i];
-    var el = document.createElement("option");
-    el.textContent = opt;
-    el.value = i;
-    select.appendChild(el);
-} 
-  }
-     
-
-     function clear(){
-
-  alert("saikrishna");
-  document.getElementById("txtGivenName").innerHTML=" "
- document.getElementById("txtLastName").innerHTML=" "
- document.getElementById("txtphoneNumber").innerHTML=" "
- $('#txtdate').val()=""
-document.getElementById("dropdown1").innerHTML="0";
-
-document.getElementById("dropdown2").innerHTML="1";
-
- document.getElementById("txtEmail").innerHTML=" "
-document.getElementById("txtNineoneNumber").innerHTML=" "
- document.getElementById("txtareaaddress").innerHTML=" "
-
-}
-
-  </script>
 </body>
 
 </html>
